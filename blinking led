@@ -1,0 +1,29 @@
+// assigning pins to some particular names
+int led1 = 3;  
+int led2 = 4;
+int led3 = 5;
+
+void setup() {
+// put your setup code here, to run once:
+
+// setting pins to output mode
+pinMode(led1,OUTPUT);  
+pinMode(led2,OUTPUT);
+pinMode(led3,OUTPUT);
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+  digitalWrite(led1,HIGH);  // turn on led 1
+  delay(4000);              // delay by 4 sec
+  digitalWrite(led1,LOW);   // turn off led 1
+  digitalWrite(led2,HIGH);  //  turning on led 2
+  delay(4000);
+  digitalWrite(led2,LOW);   // turning off led 2
+  digitalWrite(led3,HIGH);  // turning on led 3
+  delay(4000);
+  digitalWrite(led3,LOW);   // turning off led3
+    
+}
