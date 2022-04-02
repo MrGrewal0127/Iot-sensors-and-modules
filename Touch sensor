@@ -1,0 +1,26 @@
+// this program will turn on the led when we touch the touchsensor and turn of led when we do not
+
+// assigning pins
+int touchsensor = 3;
+int led = 4;
+
+void setup() {
+  // put your setup code here, to run once:
+ 
+ //setting pinmodes
+ pinMode(touchsensor,INPUT);
+ pinMode(led,OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+ 
+ if(digitalRead(touchsensor)==HIGH) //reading data from touchsensor
+   {
+  digitalWrite(led,HIGH);  // turning on led if signal is high
+  }
+  else if(digitalRead(touchsensor)==LOW)
+   {
+  digitalWrite(led,LOW);// turning off led if signal is low
+  }
+}
