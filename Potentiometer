@@ -1,0 +1,22 @@
+// this program will control the blinking speed of a led through potentiometer
+
+// assigning pins
+int potentiometer = A4;
+int led = 2;
+
+void setup() {
+  // put your setup code here, to run once:
+
+pinMode(led,OUTPUT);
+pinMode(potentiometer,INPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+int val = analogRead(potentiometer);  // readint value of potentiometer
+digitalWrite(led,HIGH);   // turning on led
+delay(val);             // wait for some time depending on potentiometer value
+digitalWrite(led,LOW);    // turning off led
+delay(val);
+}
