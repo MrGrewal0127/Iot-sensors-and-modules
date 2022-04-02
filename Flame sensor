@@ -1,0 +1,24 @@
+// this program will detect the level of heat surronding the heat sensor and if it increase from a set value then it will turn on buzzer
+
+//assigning pins
+int flamesensor = A4;
+int buzzer = 4;
+void setup() {
+  // put your setup code here, to run once:
+
+// setting pinmode
+pinMode(flamesensor,INPUT);
+  pinMode(buzzer,OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  int val = analogRead(A4);   // reading the input analog signal of flame sensor
+    if(val<300)
+   {
+     tone(buzzer,500);  //turning buzzer on with frequency 500
+    }else if(val>300)
+   {
+    noTone(buzzer);  // turning buzzer off
+  } 
+}
