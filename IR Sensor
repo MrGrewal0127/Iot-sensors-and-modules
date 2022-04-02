@@ -1,0 +1,27 @@
+// this program find if any obstacle come in front of ir sensor then led will be turn on other wise it will be turn on
+
+//assigning pins to sensor and led
+int irsensor = 3;
+int led = 13;
+
+
+int val = 0;
+
+void setup() {
+  // put your setup code here, to run once:
+  
+  //assigning modes for the pins
+pinMode(irsensor,INPUT);
+pinMode(led,OUTPUT);
+}
+void loop() {
+  // put your main code here, to run repeatedly:
+    
+    val = digitalRead(ipin);
+    if(val==HIGH){
+      digitalWrite(opin,LOW);      
+    }
+    else{
+      digitalWrite(opin,HIGH);
+    }
+}
